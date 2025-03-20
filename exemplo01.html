@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exemplo 01</title>
     <style>
         * {
-    font-size: 16px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 16px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         h1 {
             width: 30rem;
-            margin: auto;
+            margin: 1rem auto;
         }
 
         .container {
             justify-content: center;
             align-items: center;
             display: flex;
-            width: 30rem;
+            width: 40rem;
             min-height: 25rem;
             margin: 1rem auto;
             border: 1px solid #949494;
@@ -29,17 +30,22 @@
         .produto {
             background-color: #8031a7;
             color: black;
-            width: 8rem;
-            height: 8rem;
-            border-radius: .5rem;
-            padding: 1rem;
-            font-weight: bold;
-            margin: 1rem;
-            box-shadow: .5rem .5rem .3rem .01rem #7c7c7c;
         }
+
         .preco {
             background-color: black;
             color: #8031a7;
+        }
+
+        .alerta {
+            background-color: white;
+            color: red;
+        }
+
+        .produto,
+        .preco,
+        .alerta {
+            text-align: center;
             width: 8rem;
             height: 8rem;
             border-radius: .5rem;
@@ -48,42 +54,42 @@
             margin: 1rem;
             box-shadow: .5rem .5rem .3rem .01rem #7c7c7c;
         }
-
-
     </style>
 </head>
+
 <body>
     <h1>Tabela de preços</h1>
     <div class="container">
-    <script>
-        /*
-        Estrutura condicional (seleção).
-        Variável
-        Entrada e saída de dados.
-        */
-       var produto = prompt("Informe o produto:");
+        <script>
+            /*
+            Estrutura condicional (seleção).
+            Variável
+            Entrada e saída de dados.
+            */
+            var produto = prompt("Informe o produto:");
 
-       switch (produto.toLowerCase()) {
-        case "arroz":
-            document.write("<div class='produto'>Você comprou arroz.</div> <br>");
-            document.write("<div class=preco>Preço: R$ 8,97</div>");
-            break;
-        case "feijao":
-            document.write("Você digitou sem o ~. <br>");
-        case "feijão":
-                document.write("<div class='produto'>Você comprou feijão.</div><br>");
-                document.write("<div class=preco>Preço: R$ 7,89</div>");
-                break;
-        case "cafe":
-            document.write("Você digitou sem o ´. <br>");
-        case "café":
-            document.write("<div class='produto'>Você comprou café.</div><br>");
-            document.write("<div class=preco>Preço: R$ 18,45</div>");
-            break;
-        default:
-            document.write("Produto inválido!");
-       }
-       </script>
-       </div>
+            switch (produto.toLowerCase()) {
+                case "arroz":
+                    document.write("<div class='produto'>Você comprou arroz.</div>");
+                    document.write("<div class='preco'>Preço: R$ 8,97</div>");
+                    break;
+                case "feijao":
+                    document.write("<div class='alerta'>Você digitou sem o ~.</div>");
+                case "feijão":
+                    document.write("<div class='produto'>Você comprou feijão.</div>");
+                    document.write("<div class='preco'>Preço: R$ 7,89</div>");
+                    break;
+                case "cafe":
+                    document.write("<div class='alerta'>Você digitou sem o ´.</div>");
+                case "café":
+                    document.write("<div class='produto'>Você comprou café.</div>");
+                    document.write("<div class='preco'>Preço: R$ 18,45</div>");
+                    break;
+                default:
+                    document.write("<div class='alerta'>Produto inválido!</div>");
+            }
+        </script>
+    </div>
 </body>
+
 </html>
