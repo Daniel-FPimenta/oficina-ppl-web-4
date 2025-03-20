@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exemplo 04</title>
+    <title>Exemplo 06</title>
     <style>
         * {
             font-size: 16px;
@@ -54,20 +54,15 @@
             Variável
             Entrada e saída de dados.
             */
-            var opcao, num;
+            var i;
+                limInf = parseInt(prompt("Informe o limite inferior:"))
+                limSup = parseInt(prompt("Informe o limite superior:"))
 
-           do {
-                num = parseInt(prompt("Informe um número:"));
-
-                if (num % 2 == 0) {
-                    document.write(`<div class="mensagem">O número ${num} é par!</div>`);
+            for (i = limInf; i <= limSup; i++) {
+                if (i % 2 == 0) {
+                    document.write(`<div class="mensagem">${i}</div>`);
                 }
-                else {
-                    document.write(`<div class="mensagem">O número ${num} é ímpar!</div>`);
-                }
-                opcao = confirm("Deseja informar outro número?");
             }
-            while (opcao == true); 
             
             
         </script>

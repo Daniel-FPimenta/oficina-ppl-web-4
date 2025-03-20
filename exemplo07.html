@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exemplo 04</title>
+    <title>Exemplo 07</title>
     <style>
         * {
             font-size: 16px;
@@ -42,33 +42,41 @@
             box-shadow: .5rem .5rem .3rem .01rem #7c7c7c;
             font-size: 1rem;
         }
+
+        button {
+            background-color: #8031a7;
+            color: white;
+            border: none;
+            padding: .3rem 1.5rem;
+        }
+
+        #entrada {
+            padding: .25rem;
+            text-align: right;
+        }
     </style>
 </head>
 
 <body>
-    <h1>Estrutura de Repetição: Do-While</h1>
-    <div class="container">
+    <div class="painel">
+        <input type="number" id="entrada">
+        <button>Ok</button>
         <script>
             /*
-            Estrutura condicional (seleção).
+            Função.
+            Estrutura de repetição: while.
             Variável
             Entrada e saída de dados.
             */
-            var opcao, num;
 
-           do {
-                num = parseInt(prompt("Informe um número:"));
+            function processar() {
+                var i = 0, num = parseInt(document.getElementById("entrada").value);
 
-                if (num % 2 == 0) {
-                    document.write(`<div class="mensagem">O número ${num} é par!</div>`);
+                while (i < num) {
+                    document.write(`<div class="mensagem">${i}</div>`);
+                    i++;
                 }
-                else {
-                    document.write(`<div class="mensagem">O número ${num} é ímpar!</div>`);
-                }
-                opcao = confirm("Deseja informar outro número?");
             }
-            while (opcao == true); 
-            
             
         </script>
     </div>
